@@ -1,0 +1,8 @@
+---
+-  name: playbook to install tomcat pkg
+   hosts: tomcat
+   become: true
+   gather_facts: no
+
+   roles:
+      - tomcat_setup     

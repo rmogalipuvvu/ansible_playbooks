@@ -1,0 +1,13 @@
+---
+-  name: clone a repo
+   hosts: webservers
+   gather_facts: no
+   vars_files:
+     - vault2.yml      
+
+   tasks:
+   - name: cloning repo
+     git:
+       repo: https://rmogalipuvvu:{{ git_password }}@github.com/rmogalipuvvu/vault_repo.git
+       dest: /home/ansadmin/vault_test
+      
